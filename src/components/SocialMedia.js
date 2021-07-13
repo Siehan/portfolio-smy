@@ -35,19 +35,19 @@ function SocialMedia() {
               </Heading>
             </Box>
 
-            <Box flex="1" align="center" borderRadius="md" boxShadow="xl" pt="5" pb="20">
+            <Box flex="1" align="center" borderRadius="md" boxShadow="xl" pt="20" pb="20">
               <Box pb="20">
                 <Image
                   src={social_media3}
                   alt="Social media"
-                  width="330"
-                  height="230"
+                  width="350"
+                  height="250"
                   borderRadius="md"
                   boxShadow="md"
                 />
               </Box>
 
-              <Box>
+              <Box pt="10" pb="10">
                 {socialAccounts.map((item, index) => (
                   <ChakraLink
                     href={item.path}
