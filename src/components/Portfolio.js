@@ -1,4 +1,4 @@
-import { Box, Container, Heading, Image, Stack } from "@chakra-ui/react";
+import { Box, Container, Heading, Image, Stack, Text } from "@chakra-ui/react";
 import francine from "../assets/images/francine.jpg";
 import lossan from "../assets/images/lossan.jpg";
 import anabelle from "../assets/images/anabelle.jpg";
@@ -13,7 +13,7 @@ import SlideFadeOnScroll from "./SlideFadeOnScroll";
 const Portfolio = () => {
   return (
     <Box as="section" w={"100%"}>
-      <Container borderRadius="md" maxW="container.lg" id="portfolio" pt="20" pb="10">
+      <Container borderRadius="md" maxW="container.xl" id="portfolio" pt="20" pb="10">
         <SlideFadeOnScroll>
           <Box flex="1">
             <Heading
@@ -22,14 +22,17 @@ const Portfolio = () => {
               borderRadius="md"
               textShadow="1px 4px orange"
               align="center"
-              bgGradient="linear(to-l, #48BB78, #81E6D9)"
+              bgGradient="linear(to-l, orange, yellow)"
               _hover={{
-                bgGradient: "linear(to-r, #ED64A6, #805AD5)",
+                bgGradient: "linear(to-l, #48BB78, #81E6D9)",
               }}
             >
               PORTFOLIO
             </Heading>
           </Box>
+          <Text fontSize="2xl" mb="10" pt="5" textAlign="center">
+            I love photography !
+          </Text>
           <Stack
             direction={["column-reverse", null, "row"]}
             sx={{

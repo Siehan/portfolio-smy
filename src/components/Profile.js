@@ -7,7 +7,7 @@ function Profile() {
   const color = useColorModeValue("telegram.500", "telegram.400");
 
   return (
-    <Container as="section" maxW="container.lg" pt="28" pb="10">
+    <Container as="section" maxW="container.xl" pt="28" pb="10">
       <SlideFadeOnScroll>
         <Flex
           direction={["column-reverse", null, "row"]}

@@ -30,7 +30,7 @@ const Navigation = () => {
         sx={{
           "a:hover": {
             textDecoration: "none",
-            color: "orange",
+            color: "darkorange",
           },
         }}
         py="3"

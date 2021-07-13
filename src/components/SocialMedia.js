@@ -1,15 +1,23 @@
 import Icon from "@chakra-ui/icon";
-import { Box, Container, Heading } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Image, Link as ChakraLink } from "@chakra-ui/react";
 import React from "react";
 import SlideFadeOnScroll from "./SlideFadeOnScroll";
 import social_media3 from "../assets/images/social_media3.jpg";
-import { FaGithub, FaLinkedin, FaTwitter, FaFacebookF, FaInstagram, FaGoogle } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
+
+const socialAccounts = [
+  { Icon: FaLinkedin, path: "https://www.linkedin.com/in/sylvie-mémain-yé-9714501b9/", title: "Linkedin" },
+  { Icon: FaGithub, path: "https://github.com/Siehan", title: "Github" },
+  { Icon: FaTwitter, path: "https://twitter.com/memainye", title: "Twitter" },
+  { Icon: FaFacebookF, path: "https://www.facebook.com/SylvieMemainYe/", title: "Facebook" },
+  { Icon: FaInstagram, path: "https://www.instagram.com/memainye/?hl=fr", title: "Instagram" },
+];
 
 function SocialMedia() {
   return (
     <>
       <Box as="section" w={"100%"}>
-        <Container borderRadius="md" maxW="container.lg" id="socialMedia" pt="20" pb="10">
+        <Container borderRadius="md" maxW="container.xl" id="socialMedia" pt="20" pb="10">
           <SlideFadeOnScroll>
             <Box flex="1">
               <Heading
@@ -18,27 +26,42 @@ function SocialMedia() {
                 borderRadius="md"
                 textShadow="1px 4px orange"
                 align="center"
-                bgGradient="linear(to-l, #48BB78, #81E6D9)"
+                bgGradient="linear(to-l, orange, yellow)"
                 _hover={{
-                  bgGradient: "linear(to-r, #ED64A6, #805AD5)",
+                  bgGradient: "linear(to-l, #48BB78, #81E6D9)",
                 }}
               >
                 SOCIAL MEDIA
               </Heading>
             </Box>
 
-            <Box flex="1" align="center" borderRadius="md" boxShadow="xl" p="10" pb="20" overflow="hidden">
-              <Box flex="1" pb="10">
-                <img src={social_media3} alt="contact" width="300" height="278" />
+            <Box flex="1" align="center" borderRadius="md" boxShadow="xl" pt="5" pb="20">
+              <Box pb="20">
+                <Image
+                  src={social_media3}
+                  alt="Social media"
+                  width="330"
+                  height="230"
+                  borderRadius="md"
+                  boxShadow="md"
+                />
               </Box>
 
-              <Box alignItems="center" textAlign="center">
-                <Icon as={FaGithub} boxSize="50" />
-                <Icon as={FaLinkedin} boxSize="50" />
-                <Icon as={FaTwitter} boxSize="50" />
-                <Icon as={FaFacebookF} boxSize="50" />
-                <Icon as={FaInstagram} boxSize="50" />
-                <Icon as={FaGoogle} boxSize="50" />
+              <Box>
+                {socialAccounts.map((item, index) => (
+                  <ChakraLink
+                    href={item.path}
+                    aria-label={item.title}
+                    mx="6"
+                    _focus={{ outline: "none" }}
+                    key={index}
+                    isExternal
+                  >
+                    <Button aria-label={item.title} bg="transparent" boxSize="55" m={5}>
+                      <Icon as={item.Icon} boxSize="55" />
+                    </Button>
+                  </ChakraLink>
+                ))}
               </Box>
             </Box>
           </SlideFadeOnScroll>
@@ -101,6 +124,15 @@ const siteConfig = {
         label: "Mail ahmad",
         type: "gray",
         icon: <FiMail />
+
+          <Box mx="2">
+                <Icon as={FaGithub} boxSize="50" />
+                <Icon as={FaLinkedin} boxSize="50" />
+                <Icon as={FaTwitter} boxSize="50" />
+                <Icon as={FaFacebookF} boxSize="50" />
+                <Icon as={FaInstagram} boxSize="50" />
+                <Icon as={FaGoogle} boxSize="50" />
+              </Box>
       }
     ]
   }

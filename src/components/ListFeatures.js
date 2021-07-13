@@ -1,10 +1,11 @@
-import code_review_bro from "../assets/images/code_review_bro.png";
+import code_review_bro_gray from "../assets/images/code_review_bro_gray.png";
 import { CheckCircleIcon } from "@chakra-ui/icons";
 import SlideFadeOnScroll from "./SlideFadeOnScroll";
 import {
   Box,
   Container,
   Heading,
+  Image,
   List,
   ListItem,
   ListIcon,
@@ -16,12 +17,11 @@ import {
 
 const ListFeatures = () => {
   const list = ["2021", "2020", "2019-1997", "1997", "1997-1993", "1992-1991"];
-  const bg = useColorModeValue("gray.20", "teal.700");
   const color = useColorModeValue("orange");
 
   return (
-    <Box as="section" w={"100%"} bg={bg}>
-      <Container borderRadius="md" maxW="container.lg" id="experience" pt="20" pb="10">
+    <Box as="section" w={"100%"}>
+      <Container borderRadius="md" maxW="container.xl" id="experience" pt="20" pb="10">
         <SlideFadeOnScroll>
           <Box flex="1">
             <Heading
@@ -30,14 +30,20 @@ const ListFeatures = () => {
               borderRadius="md"
               textShadow="1px 4px orange"
               align="center"
-              bgGradient="linear(to-l, #48BB78, #81E6D9)"
+              bgGradient="linear(to-l, orange, yellow)"
               _hover={{
-                bgGradient: "linear(to-r, #ED64A6, #805AD5)",
+                bgGradient: "linear(to-l, #48BB78, #81E6D9)",
               }}
             >
               EXPERIENCE
             </Heading>
           </Box>
+          <Text fontSize="2xl" pt="5" textAlign="center">
+            I summarized some of my jobs, but for the last one, I spent 23 years in the same company.
+          </Text>
+          <Text fontSize="2xl" textAlign="center" pb="10">
+            Time has flown!
+          </Text>
           <Stack
             direction={["column", null, "row"]}
             sx={{
@@ -46,7 +52,7 @@ const ListFeatures = () => {
             alignItems="center"
           >
             <Box flex="1">
-              <img src={code_review_bro} alt="Code review" width="500" height="318" />
+              <Image src={code_review_bro_gray} alt="Code review" width="300" height="600" />
             </Box>
             <Box flex="1">
               <Heading mb="6" textAlign="center" fontSize={40} textShadow="1px 3px orange">
@@ -65,20 +71,6 @@ const ListFeatures = () => {
                   );
                 })}
               </List>
-              {/*
-            <SimpleGrid as={List}
-              columns="2" spacing="2"
-            >
-              {list.map((el, index) => {
-                return (
-                  <MenuItem key={index}>
-                    <ListIcon as={CheckCircleIcon} color="teal.300" />
-                    {el}
-                  </MenuItem>
-                )
-              })}
-            </SimpleGrid>
-            */}
             </Box>
           </Stack>
         </SlideFadeOnScroll>

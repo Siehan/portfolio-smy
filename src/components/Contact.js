@@ -1,6 +1,6 @@
 import { Box, Container, Heading, Text } from "@chakra-ui/layout";
 import { Button, Center, useDisclosure } from "@chakra-ui/react";
-import contact from "../assets/images/contact.png";
+import icon_contact from "../assets/images/icon_contact.png";
 import Form from "./Form";
 import SlideFadeOnScroll from "./SlideFadeOnScroll";
 
@@ -9,7 +9,7 @@ const Contact = () => {
 
   return (
     <Box as="section" w={"100%"}>
-      <Container borderRadius="md" maxW="container.lg" id="contact" pt="20" pb="10">
+      <Container id="contact" borderRadius="md" maxW="container.xl" pt="20" pb="10">
         <SlideFadeOnScroll>
           <Box flex="1">
             <Heading
@@ -18,9 +18,9 @@ const Contact = () => {
               borderRadius="md"
               textShadow="1px 4px orange"
               align="center"
-              bgGradient="linear(to-l, #48BB78, #81E6D9)"
+              bgGradient="linear(to-l, orange, yellow)"
               _hover={{
-                bgGradient: "linear(to-r, #ED64A6, #805AD5)",
+                bgGradient: "linear(to-l, #48BB78, #81E6D9)",
               }}
             >
               CONTACT
@@ -29,10 +29,10 @@ const Contact = () => {
 
           <Box flex="1" align="center" borderRadius="md" boxShadow="xl" p="10" pb="20" overflow="hidden">
             <Box flex="1" pb="10">
-              <img src={contact} alt="contact" width="300" height="278" />
+              <img src={icon_contact} alt="icon_contact" width="300" height="278" />
             </Box>
             <Text fontSize="xl" mb="10" textAlign="center">
-              You can write a message :
+              if you wish to send me a message, click on below to complete the form :
             </Text>
             <Center>
               <Button colorScheme="teal" size="lg" onClick={onOpen}>

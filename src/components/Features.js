@@ -5,7 +5,8 @@ import calendar1 from "../assets/images/calendar1.jpg";
 import calendar3 from "../assets/images/calendar3.png";
 import calendar4 from "../assets/images/calendar4.png";
 import Feature from "./Feature";
-import { Container, SimpleGrid } from "@chakra-ui/react";
+import { Box, Container, SimpleGrid } from "@chakra-ui/react";
+import { Button, Center, Text } from "@chakra-ui/react";
 import SlideFadeOnScroll from "./SlideFadeOnScroll";
 
 const Features = () => {
@@ -42,15 +43,27 @@ const Features = () => {
     },
   ];
   return (
-    <Container as="section" maxW="container.lg" py="10" pb="-5">
-      <SlideFadeOnScroll>
-        <SimpleGrid columns={[1, null, 3]} gap="8">
-          {features.map((el, index) => {
-            return <Feature key={index} {...el}></Feature>;
-          })}
-        </SimpleGrid>
-      </SlideFadeOnScroll>
-    </Container>
+    <Box as="section" w={"100%"}>
+      <Container borderRadius="md" maxW="container.xl" p="20" pb="10" boxShadow="xl">
+        <SlideFadeOnScroll>
+          <SimpleGrid columns={[1, null, 3]} gap="8">
+            {features.map((el, index) => {
+              return <Feature key={index} {...el}></Feature>;
+            })}
+          </SimpleGrid>
+          <Box>
+            <Text fontSize="xl" mb="10" pt="7" textAlign="center">
+              Please, feel free to download my Curriculum vitae for more informations :
+            </Text>
+            <Center>
+              <Button colorScheme="teal" size="lg">
+                Download CV
+              </Button>
+            </Center>
+          </Box>
+        </SlideFadeOnScroll>
+      </Container>
+    </Box>
   );
 };
 

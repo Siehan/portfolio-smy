@@ -5,7 +5,7 @@ import SlideFadeOnScroll from "./SlideFadeOnScroll";
 function Header() {
   return (
     <>
-      <Container as="header" maxW="container.lg" pt="28" pb="10" id="home">
+      <Container as="header" maxW="container.xl" pt="28" pb="10" id="home">
         <SlideFadeOnScroll>
           <Box>
             <Heading as="h1" fontSize={["3xl", "4xl"]} pb={"30"} pt="10">

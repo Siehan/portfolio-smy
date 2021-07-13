@@ -13,6 +13,9 @@ const NavigationListItems = ({ sx }) => {
         <Link href="/#home">Home</Link>
       </ListItem>
       <ListItem>
+        <Link href="/#about">About</Link>
+      </ListItem>
+      <ListItem>
         <Link href="/#portfolio">Portfolio</Link>
       </ListItem>
       <ListItem>
@@ -20,9 +23,6 @@ const NavigationListItems = ({ sx }) => {
       </ListItem>
       <ListItem>
         <Link href="/#socialMedia">Social Media</Link>
-      </ListItem>
-      <ListItem>
-        <Link href="/#about">About</Link>
       </ListItem>
       <ListItem>
         <Link href="/#contact">Contact</Link>
